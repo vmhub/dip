@@ -52,7 +52,7 @@ public class CandleConsoleMethods {
      * @param data CandleData object for providing methods.
      * @throws java.io.IOException
      */
-    private static void chooseTimeFrame(CandleData data) throws IOException {
+    private static void chooseTimeFrame(final CandleData data) throws IOException {
         int flag;
         do {
             System.out.println("One or five minute time frame? Enter 1 or 5.");
@@ -85,7 +85,7 @@ public class CandleConsoleMethods {
      * @param data CandleData object for providing methods.
      * @throws java.io.IOException
      */
-    private static void parseFive(CandleData data) throws IOException {
+    private static void parseFive(final CandleData data) throws IOException {
         int flag;
         do {
             System.out.println("Create a 5 minute time frame? Enter yes or no.");

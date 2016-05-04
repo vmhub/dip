@@ -20,7 +20,7 @@ public interface TextStatistics {
      *
      * @param splitter Regex for splitting the text.
      */
-    public void reSplit(String splitter);
+    public void reSplit(final String splitter);
 
     /**
      * Method that returns an array containing all the tokens within a text.
@@ -76,7 +76,7 @@ public interface TextStatistics {
      * Term Frequency.
      * @return A number describing the Term Frequency of a token.
      */
-    public BigDecimal tokenTF(String name, int digits);
+    public BigDecimal tokenTF(final String name,final int digits);
 
     /**
      * Method in charge of finding the Term Frequency of all the tokens in a
@@ -86,5 +86,5 @@ public interface TextStatistics {
      * Term Frequency.
      * @return A number describing the Term Frequency of all tokens.
      */
-    public Map<String, BigDecimal> everyTF(int digits);
+    public Map<String, BigDecimal> everyTF(final int digits);
 }

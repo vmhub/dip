@@ -24,7 +24,7 @@ public class PdfTextGetter {
      *
      * @param fileName  Document name along with the entire path.
      */
-    public PdfTextGetter(String fileName) {
+    public PdfTextGetter(final String fileName) {
         this.fileName = fileName;
     }
 

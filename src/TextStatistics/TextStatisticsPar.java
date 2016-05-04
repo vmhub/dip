@@ -28,7 +28,7 @@ public class TextStatisticsPar implements TextStatistics {
      *
      * @param text Text of a document stored in a String.
      */
-    public TextStatisticsPar(String text) {
+    public TextStatisticsPar(final String text) {
         this.text = text.toLowerCase();
         splitArray = Pattern.compile("\\s+").splitAsStream(this.text).parallel().filter(i -> i.trim().isEmpty() == false).toArray(String[]::new);
     }
@@ -38,13 +38,13 @@ public class TextStatisticsPar implements TextStatistics {
      * @param splitter Custom Regex for text splitting.
      * @param text Text of a document stored in a String.
      */
-    public TextStatisticsPar(String splitter, String text) {
+    public TextStatisticsPar(final String splitter,final String text) {
         this.text = text.toLowerCase();
         splitArray = Pattern.compile(splitter).splitAsStream(this.text).parallel().filter(i -> i.trim().isEmpty() == false).toArray(String[]::new);
     }
 
     @Override
-    public void reSplit(String splitter) {
+    public void reSplit(final String splitter) {
         splitArray = Pattern.compile(splitter).splitAsStream(this.text).parallel().filter(i -> i.trim().isEmpty() == false).toArray(String[]::new);
         wordCount = -1;
     }
@@ -89,7 +89,7 @@ public class TextStatisticsPar implements TextStatistics {
     }
 
     @Override
-    public BigDecimal tokenTF(String name, int digits) {
+    public BigDecimal tokenTF(final String name,final int digits) {
         if (wordCount == -1) {
             wordCount = tokensCount();
         }
@@ -98,7 +98,7 @@ public class TextStatisticsPar implements TextStatistics {
     }
 
     @Override
-    public Map<String, BigDecimal> everyTF(int digits) {
+    public Map<String, BigDecimal> everyTF(final int digits) {
         if (wordCount == -1) {
             wordCount = tokensCount();
         }

@@ -26,7 +26,7 @@ public class StatisticsConsoleMethods {
  * 
  * @param stat TextStatistics object required to call the functions with.
  */
-    private static void loop(TextStatistics stat) {
+    private static void loop(final TextStatistics stat) {
         for (;;) {
             int key = menu();
             switch (key) {

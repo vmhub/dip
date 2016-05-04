@@ -22,7 +22,7 @@ public class HtmlTextGetter {
      *
      * @param fileName Document name along with the entire path.
      */
-    public HtmlTextGetter(String fileName) {
+    public HtmlTextGetter(final String fileName) {
         this.fileName = fileName;
     }
 /**
