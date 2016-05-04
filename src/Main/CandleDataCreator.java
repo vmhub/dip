@@ -1,5 +1,3 @@
-
-
 ///*
 // * To change this license header, choose License Headers in Project Properties.
 // * To change this template file, choose Tools | Templates
@@ -10,8 +8,6 @@ package Main;
 import Helpers.CandleConsoleMethods;
 import java.io.IOException;
 
-
-
 //
 ///**Main class needed in order to run the program.
 // *
@@ -19,14 +15,14 @@ import java.io.IOException;
 // */
 public class CandleDataCreator {
 
-    public static void main(String[] args){ 
-                try {
-                CandleConsoleMethods.start();
-                }catch (IOException ex) {
-                    System.out.println("Invalid file.");
-                }catch(StringIndexOutOfBoundsException ex){
-                    System.out.println("No file extension.");
-                }
-        }           
-   }
+    public static void main(String[] args) {
+        try {
+            CandleConsoleMethods.start();
+        } catch (IOException ex) {
+            System.out.println("Invalid file.");
+        } catch (StringIndexOutOfBoundsException ex) {
+            System.out.println("No file extension.");
+        }
+    }
 
+}
