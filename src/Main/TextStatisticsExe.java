@@ -12,8 +12,17 @@ import java.io.IOException;
 // *
 // * @author vadim Mishutov
 // */
+
+/**
+ *
+ * @author SevenThree
+ */
 public class TextStatisticsExe {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         try {
             StatisticsConsoleMethods.start();

@@ -39,8 +39,7 @@ public class PdfTextGetter {
         String parsedText;
         File file = new File(fileName);
         if (!file.exists() || !file.isFile()) {
-            System.err.println("error with " + fileName);
-            return null;
+           throw new IOException();
         }
         parser = new PDFParser(new FileInputStream(file));
         parser.parse();

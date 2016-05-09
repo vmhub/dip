@@ -5,6 +5,7 @@
 // */
 package Main;
 
+
 import Helpers.CandleConsoleMethods;
 import java.io.IOException;
 
@@ -13,8 +14,17 @@ import java.io.IOException;
 // *
 // * @author vadim Mishutov
 // */
+
+/**
+ *
+ * @author SevenThree
+ */
 public class CandleDataCreator {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         try {
             CandleConsoleMethods.start();
@@ -23,6 +33,7 @@ public class CandleDataCreator {
         } catch (StringIndexOutOfBoundsException ex) {
             System.out.println("No file extension.");
         }
+
     }
 
 }

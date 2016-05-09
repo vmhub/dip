@@ -27,7 +27,6 @@ public class CandleConsoleMethods {
      */
     public static void start() throws IOException, StringIndexOutOfBoundsException {
         int flag;
-        do {
             System.out.println("Enter file name with extension (.csv , .txt).");
             String filename = readString().trim();
             int index = filename.lastIndexOf(".");
@@ -39,11 +38,8 @@ public class CandleConsoleMethods {
                     flag = 1;
                     break;
                 default:
-                    System.out.println("Cannot parse format.");
-                    flag = 0;
-                    break;
+                 throw new IOException();
             }
-        } while (flag == 0);
     }
 
     /**

@@ -148,8 +148,7 @@ public class StatisticsConsoleMethods {
         HtmlTextGetter htmlParser;
         PdfTextGetter pdfParser;
         int flag;
-        String text = null;
-        do {
+        String text = null;      
             System.out.println("Enter file name with path and extension.(.html / .pdf)");
             String filename = readString().trim();
 
@@ -166,16 +165,14 @@ public class StatisticsConsoleMethods {
                     pdfParser = new PdfTextGetter(filename);
                     System.out.println("Parsing...");
                     text = pdfParser.toText();
+                    if(text!=null){
                     System.out.println("Done.");
                     flag = 1;
+                    }else throw new IOException();
                     break;
                 default:
-                    System.out.println("Cannot parse format.");
-                    flag = 0;
-                    break;
+                   throw new IOException();
             }
-
-        } while (flag == 0);
         do {
             System.out.println("Choose processing method: \n 1 - sequential \n 2 - parallel");
             int proc = readInt();
